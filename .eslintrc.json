@@ -8,5 +8,5 @@
 		"@javascript-eslint/semi": "",
 		"@typescript-eslint/semi": "warn",
 		"semi": 0
-  },
+  }
 }

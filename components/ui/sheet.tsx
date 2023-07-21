@@ -1,6 +1,6 @@
-"use client"
-import cn from "@/lib/utils";
+"use client";
 import * as React from "react";
+import {cn} from "@/lib/utils";
 import {X} from "lucide-react";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import {cva, type VariantProps} from "class-variance-authority";
@@ -10,11 +10,11 @@ const SheetClose = SheetPrimitive.Close;
 const SheetPortal = ({
   className,
   ...props
-}: SheetPrimitive.DialogPortalProps) => (
-  <SheetPrimitive.Portal className={cn(className)} {...props}/>
-);
+}: SheetPrimitive.DialogPortalProps) => (<SheetPrimitive.Portal className={cn(className)} {...props}/>);
 SheetPortal.displayName = SheetPrimitive.Portal.displayName
-const SheetOverlay = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Overlay>, React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>>(({ className, ...props }, ref) => (
+const SheetOverlay = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Overlay>, React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>>(({ 
+	className, ...props 
+}, ref) => (
   <SheetPrimitive.Overlay
     className={cn("fixed inset-0 z-50 bg-background/80 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className
@@ -69,7 +69,7 @@ SheetTitle.displayName = SheetPrimitive.Title.displayName
 const SheetDescription = React.forwardRef<React.ElementRef<typeof SheetPrimitive.Description>, React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>>(({className, ...props}, ref) => (
   <SheetPrimitive.Description ref={ref} className={cn("text-sm text-muted-foreground", className)} {...props}/>
 ));
-SheetDescription.displayName = SheetPrimitive.Description.displayName
+SheetDescription.displayName = SheetPrimitive.Description.displayName;
 export {
   Sheet,
   SheetTrigger,
